@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-# Scouting P.A.S.S.
+# Scouting P.A.S.S. - Now with pit support!(wip)
 
 #### A scouting system for FIRST FRC competitions developed by [PWNAGE - Team #2451](https://pwnagerobotics.org).
 
