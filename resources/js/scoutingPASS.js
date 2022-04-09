@@ -370,6 +370,14 @@ function addElement(table, idx, name, data){
   return idx
 }
 
+function createPanel(panelName){
+  let panel = document.createElement("div");
+  panel.setAttribute("id",panelName);
+  panel.setAttribute("class","page_title");
+  panel.setAttribute("style", "background-color: rgb(89, 134, 168)");
+  
+}
+
 function configure(){
   try {
     var mydata = JSON.parse(config_data);
@@ -393,7 +401,18 @@ function configure(){
         elements[i].innerHTML = mydata.page_title;
     }
   }
+  Object.keys(mydata.elements).forEach(
+    function(panelName){
+      let paneldata = mydata.elements[panelName];
 
+      let panelNode = createPanel(panelName);
+
+      let qrCodePanel = document.getElementById("qr-code");
+
+      paneldata.appendChild();
+    }
+  )
+  /*
   // Configure prematch screen
   var pmc = mydata.elements.prematch;
   var pmt = document.getElementById("prematch_table");
@@ -438,7 +457,7 @@ function configure(){
     const [key, value] = el;
     idx = addElement(pmt, idx, key, value);
   });
-	
+	*/
   return 0
 }
 
